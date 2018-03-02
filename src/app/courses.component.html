@@ -1,0 +1,14 @@
+<body>
+<h1>{{getTitle()}}</h1>
+<table>
+    <tr *ngFor="let course of courses; let i = index"  [class]='classes[i%3]'>
+        <td>{{course}}</td>
+    </tr>
+</table>
+
+<form>
+    <input type="text" class="txt" name="bar" placeholder="add rows here..." [(ngModel)]="goaltext">
+    <input type="submit" class="button" value="Add" (click)="AddRow()">
+</form>
+
+</body>
